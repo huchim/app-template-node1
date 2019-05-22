@@ -8,7 +8,7 @@ mkdir -p ./configurations
 mkdir -p ./configurations/webpack
 
 # Webpack
-npm install -D --no-audit --prefer-offline webpack@^4.31.0  webpack-cli@^3.3.2  webpack-node-externals@^1.7.2
+npm install -D --no-audit --prefer-offline webpack@^4.17.1  webpack-cli@^3.1.0 webpack-node-externals@^1.7.2
 npm install -D --no-audit --prefer-offline html-webpack-plugin@^3.2.0  mini-css-extract-plugin@^0.4.2  webpack-concat-plugin@^2.4.2
 npm install -D --no-audit --prefer-offline css-loader@^2.1.1 file-loader@^3.0.1 style-loader@^0.20.1 url-loader@^1.1.2
 
