@@ -1,0 +1,10 @@
+# Folders
+node_modules
+dist
+.vscode
+tmp
+
+# Files
+*.log
+*.tmp
+*.backup
