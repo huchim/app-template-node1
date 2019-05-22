@@ -36,9 +36,9 @@ git archive master | tar -x -C $output
 
 # Cleanup
 rm -rf $tmpdir
-cd $cwd
+cd $output
 
 # Run custom script.
-sh ./configurations/templates/${name}.sh $cwd
+sh $output/configurations/templates/${name}.sh $cwd
 
 echo "$output"
