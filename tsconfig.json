@@ -1,18 +1,16 @@
 {
     "compilerOptions": {
         "target": "es6",
-        "module": "commonjs",
-        "moduleResolution": "node",
         "jsx": "react",
-        "esModuleInterop": true,
-        "baseUrl": "src",
-        "declaration": true,
+        "outDir": "tmp",
         "strictFunctionTypes": true,
+        "moduleResolution": "node",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
+        "sourceMap": false,
         "noUnusedLocals": false,
         "noUnusedParameters": false,
-        "outDir": "tmp",
+        "baseUrl": "src",
         "plugins": [
             {
                 "name": "typescript-tslint-plugin",
