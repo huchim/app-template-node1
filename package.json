@@ -4,7 +4,6 @@
     "description": "Avannly Landing Web Page",
     "main": "index.js",
     "scripts": {
-        "installNonSave": "npm install node-sass --no-save --no-audit --prefer-offline"
     },
     "author": "Carlos Huchim Ahumada <info@huchim.com> (https://huchim.com)",
     "license": "ISC",
