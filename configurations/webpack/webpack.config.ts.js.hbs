@@ -1,0 +1,55 @@
+const path = require("path");
+const HappyPack = require('happypack');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+
+module.exports = {
+    entry: {
+        index: "./src/index.ts",
+    },
+    output: {
+        filename: "[name].js",
+        path: path.resolve("./dist"),
+    },
+    resolve: {
+        extensions: [ ".ts", ".tsx" ],
+        plugins: [ new TsconfigPathsPlugin({ configFile: "tsconfig.json", baseUrl: "src" }) ],
+        modules: [
+            "./src",
+            "./node_modules",
+        ],
+    },
+    module: {
+        rules: [{
+            test: /\.ts?$/,
+            use: [
+                { loader: "happypack/loader?id=ts"},
+            ],
+        }],
+    },
+    plugins: [
+        new HappyPack({
+            id: 'ts',
+            threads: 1,
+            loaders: [
+                {
+                    loader: 'ts-loader',
+                    options: {
+                        happyPackMode: true,
+                        transpileOnly: true,
+                    }
+                },
+            ],
+        })
+    ],
+    externals: {
+        "immutable": "Immutable",
+        "classnames": "classNames",
+        "react": "React",
+        "react-dom": "ReactDOM",
+        "redux": "Redux",
+        "redux-thunk": "ReduxThunk",
+        "react-router": "ReactRouter",
+        "react-redux": "ReactRedux",        
+        "react-router-dom": "ReactRouterDOM"
+    }
+};

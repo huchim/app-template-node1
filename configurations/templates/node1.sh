@@ -20,6 +20,4 @@ npm install -D --no-audit --prefer-offline happypack@^5.0.0 ts-loader@^3.5.0 tsc
 npm install -D --no-audit --prefer-offline mocha@^5.0.4 @types/mocha@^2.2.48 chai@^4.1.2 @types/chai@^4.1.2
 npm install -D --no-audit --prefer-offline ts-node@^5.0.1 tsconfig-paths@^3.4.2
 
-# Sass Support
-npm install -D --no-audit --prefer-offline sass-loader@^7.1.0
-npm install node-sass --no-save
+
