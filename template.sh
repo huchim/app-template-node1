@@ -14,10 +14,19 @@ then
       exit -1
 fi
 
-url="https://github.com/huchim/app-template-$name.git"
-tmpdir=$(mktemp -d -t huchim.XXXXXXXXXX)
+cwd=$(dirname $0)
 
+# Clone repository
+tmpdir=$(mktemp -d -t huchim.XXXXXXXXXX)
+url="https://github.com/huchim/app-template-$name.git"
 git clone $url $tmpdir
-cp -fr tmpdir output
+
+# Export repository to output
+cd $tmpdir
+git archive master | tar -x -C $output
+
+# Cleanup
+cd $cwd
+rm -rf $tmpdir
 
 echo "$output"
