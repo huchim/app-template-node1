@@ -1,0 +1,5 @@
+--require ts-node/register
+--require tsconfig-paths/register
+--recursive
+--require test/mocha.env.js
+test/**/*.spec.ts
